@@ -347,6 +347,6 @@ Observe how all the different tools are being used to answer the user's question
 
 Congratulations! You have successfully run your first Langflow Labs.
 
-😊 Did you know that LangFlow integrated with [watsonx Orchestrate](!https://www.ibm.com/products/watsonx-orchestrate), IBM best-in-class Agentic Platform ? 😊
+😊 Did you know that LangFlow integrated with [watsonx Orchestrate](https://www.ibm.com/products/watsonx-orchestrate), IBM best-in-class Agentic Platform ? 😊
 
-Please find a video on this [Linkedin Post](!https://www.linkedin.com/posts/julien-vincent-pradier_sympa-de-voir-arriver-de-nouveaux-coll%C3%A8gues-activity-7392514015291133953-RWIP).
+Please find a video on this [Linkedin Post](https://www.linkedin.com/posts/julien-vincent-pradier_sympa-de-voir-arriver-de-nouveaux-coll%C3%A8gues-activity-7392514015291133953-RWIP).
