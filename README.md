@@ -1,4 +1,4 @@
-# 🧠 Agentic AI Workshop – Customer Support Agent
+# 🧠 Langflow Agentic AI Workshop – Customer Support Agent
 
 ## 🎯 Goal of the workshop
 Learn how to build a powerful, intelligent customer support agent using **DataStax Langflow**. You’ll start by creating a simple chatbot with **watsonx.ai** (IBM's generative AI platform), then enrich it with retrieval-augmented generation (RAG) by connecting it to your own FAQ knowledge base using **DataStax Astra DB**. Finally, you’ll add tools such as order lookups, product info access, calculators, and web tools to make your agent truly agentic—capable of reasoning, taking actions, and handling real-world customer support scenarios.
@@ -11,13 +11,10 @@ Our fully functional Customer Support Agent will be able to:
 - Combine tools (like calculators and structure data lookups) to generate multi-step responses
 - Adapt dynamically to user intent—just like a real support agent would
 
-By the end of the workshop you've learned:
+By the end of the workshop you've learned  how to use **Langflow** to create **intelligent agents** utilizing multiple tools and should be able to pick up some additional insights on:
 1. How to use **Astra DB** to store **structured and unstructured data**
 2. How to leverage the **Vectorize** functionality in Astra DB to transparantly **create Vector Embeddings**
 3. How to use **watsonx.ai** to use foundational models (LLMs)
-4. How to use **Langflow** to create **intelligent agents** utilizing multiple tools
-5. How to utilise the Customer Support Agent flow in a **customer facing app**
-6. How to publish the Customer Support agent as an **MCP server** and use it in Claude desktop and in **watsonx Orchestrate**.
 
 ## 🛠️ Prerequisites
 This workshop assumes you have access to:
@@ -25,7 +22,7 @@ This workshop assumes you have access to:
 
 During the course, you'll gain access to the following by signing up for free:
 1. [DataStax Astra DB](https://astra.datastax.com) (sign up through Google, your **public** Github account or manually with an email address)
-2. [IBM watsonx.ai](https://www.ibm.com/products/watsonx-ai) (you can sign up for a free trial)
+2. [IBM watsonx.ai](https://www.ibm.com/products/watsonx-ai) (you can sign up for a free trial or use one of the API keys)
 3. [DataStax Langflow](https://langflow.org)
 
 Follow the below steps and note down the **Astra DB API Endpoint**, **Astra DB Application Token**, **watsonx.ai Project ID**, **watsonx.ai API Key** and **watsonx.ai URL** as we'll need them later on.
@@ -47,7 +44,7 @@ Make sure you have a vector-capable Astra database (get one for free at [astra.d
 - Once logged in, create a new project (or use an existing one).
 - Navigate to the API Keys section (Administration → Access (IAM) → API keys) and create a new **API key**. Save this key securely.
 - Note your **Project ID** (found in your watsonx.ai project details).
-- You will also need the **watsonx.ai URL** (typically `https://eu-de.ml.cloud.ibm.com` or as shown in your project dashboard).
+- You will also need the **watsonx.ai URL** (typically `https://us-south.ml.cloud.ibm.com` or as shown in your project dashboard).
 - For more details, see the [watsonx.ai documentation](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/ml-authentication.html?context=wx).
 
     *(Optional: If you need a service instance, create a new instance of "watsonx.ai" in the IBM Cloud console and bind it to your project.)*
@@ -56,21 +53,23 @@ Make sure you have a vector-capable Astra database (get one for free at [astra.d
 
 ### Get access to Langflow
 There are several ways to gain access to Langflow. Pick the one that suits you best 😊:
-- [Langflow desktop](https://www.langflow.org/desktop) (currently only for Mac)
 - [Managed Langflow on Astra](https://astra.datastax.com/langflow)
-- (easiest 🤩) Just follow the instructions and use Github Codespaces in this tuturial
+- [Langflow desktop](https://www.langflow.org/desktop) (currently only for Mac)
+- (for techies 🤩) Just follow the instructions and use Github Codespaces in this tutorial
 
-### ⚡️ Open this tutorial on Github Codespaces
+Last two ones require some download time (be aware - 10 to 15 minutes)
+
+### ⚡️ Follow these instructions to access Langflow on Github Codespaces
 To make life easier, we'll use the awesome Github Codespace functionality. Github offers you a smooth cloud-based developer experience to get started quickly. How?
 
-1. Open the [watsonx-langflow-agent](https://github.com/difli/watsonx-langflow-agent) repository
+1. Open the [watsonx-langflow-agent](https://github.com/jpradier/WatsonX-Langflow) repository
 2. Click on `Use this template`->`Open in a codespace` as follows:
 
     ![github-open-in-codespace](./assets/github-open-in-codespace.png)
 
     🎉 Congratulations, you just started your cloud IDE in which we'll work from here.
 
-    💡 In case you want to keep you changes, you can also opt to 'fork' the repo by clicking `Create a new repository`. This will also enable you to check out the code locally and run from your own machine.
+    💡 In case you want to keep you changes, you can also opt to 'fork' the repo by clicking `Create a new repository`. This will also enable you to check out the code locally and run from your own machine.  
 
 5. Configure the secrets as follows:
 
@@ -155,9 +154,15 @@ Click the magnifying glass `🔍` in the `watsonx.ai` component. This shows you 
 #### Steps:
 1. Reproduce the above flow (or load it from [./flows/basic-agentic-ai.json](./flows/basic-agentic-ai.json))
 2. For watsonx.ai, ensure that the `API Endpoint`, `Project ID` and `API Key` have been set correctly. Also make sure the output is set to `Language Model`.
-3. Ensure the model is set to a chat-capable model, such as `mistralai/mistral-large`
+3. Ensure the model is set to a chat-capable model, such as `openai/gpt-oss-120b`
 4. When adding the `URL` and `Calculator` components to the canvas, select them and click `Tool mode`
-5. Connect all the components
+5. Replace the Agent Instruction by 
+```
+You are a helpful assistant that can use tools to answer questions and perform tasks.
+You must make use of the tools provided to generate responses.
+When any of the tools don't provide a response, say "I'm sorry, I can't help with that".
+```
+6. Connect all the components
 
 👏 Amazing! You just built your first AI Agent. Let's run it by clicking `▶️ Playground` and asking the question:
 
@@ -203,6 +208,14 @@ Extend your existing Basic Agentic AI flow with the following:
 4. Connect the `Astra DB` component to the `Agent` component
 
 ![astra-rag-agent](./assets/astra-rag-agent.png)  
+
+5. Modify the Agent Instructions to 
+```
+You are a helpful assistant from ACME company that can use tools to answer questions and perform tasks.
+You must make use of the tools provided to generate responses especially the vector search tool when being asked question about ACME policies
+When any of the tools don't provide a response, say "I'm sorry, I can't help with that".
+```
+
 For ease of use, this flow is also available here: [./flows/rag-agentic-ai.json](./flows/rag-agentic-ai.json).
 
 Let's run it by clicking `▶️ Playground` and asking the question:
@@ -296,8 +309,8 @@ Let's provide our Agent a bit more information about what it's capable of doing 
 ```text
 You are a skilled customer service agent supporting Customer Service Employees to answer questions from customers. Your primary responsibility is to use the available tools to accurately address user inquiries and provide detailed, helpful responses. You can:
 
-- Look up order numbers to retrieve and share order details. Keep in mind that the date is the order date and that price is in USD.
-- Access product information to provide relevant descriptions or specifications based on the retrieved product ids.
+- Look up order numbers as string to retrieve and share order details. Keep in mind that the date is the order date and that price is in USD.
+- Access product information to provide relevant descriptions or specifications based on the retrieved product ids as string (must NOT be numeric; wrap numbers in quotes).
 - Use the Astra DB knowledge base about Frequently Asked Questions on shipping, returns, placing orders, and more. Always use this tool to find relevant content!
 - Use the Calculator tool to perform basic arithmetic. Only use the calculator tool!
 - Use the URL tool to find known information on the internet or APIs to make the response more accurate.
@@ -332,172 +345,8 @@ Let's run some queries. For instance:
 
 Observe how all the different tools are being used to answer the user's questions.
 
-### 5. 📱 Create an external app that call the Langflow REST Endpoint
-In this step we'll create a simple Python app that runs the Langflow flow.
+Congratulations! You have successfully run your first Langflow Labs.
 
-#### Steps: Use the Langflow API endpoint in Python
-1. In Langflow exit the Playground and click on `Share` in the right top corner and then click `API Access`
-2. Click on `Python`
+😊 Did you know that LangFlow integrated with [watsonx Orchestrate](!https://www.ibm.com/products/watsonx-orchestrate), IBM best-in-class Agentic Platform ? 😊
 
-    ![langflow-python-api](./assets/langflow-python-api.png)
-
-3. Copy the code, use your Codespaces cloud IDE and paste it in a new file called `flow.py`
-    - Change the `url` variable on line to 5 to `http://localhost:7860`, make sure to keep the full path (`/api/...`)!
-    - Change the `input_value` variable on line 11 to something like '*How can I cancel order 1001 and what is the shipping policy?*'
-    - On line 15 add: headers = {'x-api-key': 'YOUR-API-KEY, 'Content-Type': 'application/json'}
-5. Save the file
-6. In the same API Access window in Langflow now click the `create and API key` link
-7. In the new window, click `+ Add New`, type a description (e.g. Support Agent) and click `Generate API Key`
-8. Make note of the generated API Key
-    - ⚠️ This is the only time you'll see it, so make sure you save it somewhere handy!
-
-Let's run it!  
-Return to your Codespaces Cloud IDE and open a new `TERNINAL` window by clicking the `+` sign:
-
-![codespaces-new-terminal](./assets/codespaces-new-terminal.png)
-
-Now copy-past the following in the terminal and hit Enter:
-
-```bash
-export LANGFLOW_API_KEY=<your just generated API key>
-uv run flow.py
-```
-
-As a response you'll see a JSON structure that contains the actual answer and additonal metadata.  
-The answer you're probably looking for is located inside the JSONPath `$.outputs[0].outputs[0].results.message.text`.
-
-If you change line 31 to the following, you'll see the actual response: `print(response.json()['outputs'][0]['outputs'][0]['results']['message']['text'])`
-
-### 6. 🤩 Add a visual front-end app
-In this step we'll use a simple Streamlit app that implements a Customer Support Agent.
-
-⚠️ You need the Flow ID of your flow which can be found as the unique ID following `.../flow/` in the URL of Langflow while your Flow is open. Otherwise you can find it on line 10 in `flow.py`  following `.../run/`.
-
-In order to run the app:
-```bash
-export LANGFLOW_API_KEY=<your just generated API key>
-export LANGFLOW_FLOW_ID=<your flow id>
-uv run streamlit run app.py
-```
-
-Now click `Open in browser` and the App will open:
-
-![streamlit-front-end](./assets/streamlit-front-end.png)
-
-### 7. Publish as an MCP server
-MCP helps you build agents and complex workflows on top of LLMs. LLMs frequently need to integrate with data and tools, and MCP provides:
-- A growing list of pre-built integrations that your LLM can directly plug into
-- The flexibility to switch between LLM providers and vendors
-- Best practices for securing your data within your infrastructure
-
-Langflow easily enables you to publish your flows as an MCP server. Let see how!
-
-#### Download Claude desktop
-1. Download [Claude Desktop](https://claude.ai/download)
-2. Create a (free) account and sign in
-
-#### Publish the flow as MCP server
-3. Go back to your Langflow canvas
-4. Click `Share` and `MCP Server`
-5. Click `Edit Tools` and ensure the Tool name and Tool description describe something meaningful. Also make sure the checkbox is checked.
-    ![mcp-tool](./assets/mcp-tool.png)
-6. Click `JSON`, select your environment and click the copy button
-
-#### Configure Claude desktop to invoke the MCP server
-
-7. Open Claude desktop
-8. Click `Settings` and `Developer`
-9. Click `Edit Config`, right-click `claude_desktop_config.json` and open it with your favorite IDE
-10. Now paste the JSON contents from Langflow and save it
-    ⚠️ You may need to define the full path to uvx. On a linux based environment use which uvx to find out where it's installed. See the example below:
-
-    ![claude-config](./assets/claude-config.png)
-
-11. Restart Claude desktop to load the new config and allow Claude to read the tool availability
-
-🥳 You did it! You now have access to the Langflow flow through a MCP client. To confirm the MCP server is accesible, click on the setting button. You should see the `lf-starter_project` being available. Upon clicking it, you'll see the `customer_support_agent` tool availability.
-
-![claude-mcp-server](/assets/claude-mcp-server.png)
-
-Run a query like:
-
-    What's the status of my order 1001
-
-Claude will ask you for approval to invoke the Customer Support Agent tool and you'll get something back like:
-
-![claude-desktop](./assets/claude-desktop.png)
-
-💡 There's more information about working with MCP in the [Claude developer docs](https://modelcontextprotocol.io/quickstart/user).
-
-💡 In case you want to debug MCP servers or understand what's happening on the line, you can use [MCP Inspector](https://github.com/modelcontextprotocol/inspector). It's easy to run it through:
-
-```sh
-npx @modelcontextprotocol/inspector
-```
-
-## 8. ✨ Integrate with watsonx Orchestrate
-This section provides a step-by-step visual walkthrough for integrating the agentic flow you built in Langflow as a callable tool within your local **IBM watsonx Orchestrate** environment.
-
-By leveraging the Model Context Protocol (MCP) server built into Langflow, you can expose complex, multi-step agents as a single, powerful tool that Orchestrate can use.
-
-### Prerequisites
-
-Before you begin, ensure you have the following components set up and running:
-
-1.  **A Running Local watsonx Orchestrate Instance**: As set up by the [`wxo-adk-on-colima`](https://github.com/difli/wxo-adk-on-colima) project.
-2.  **A Running Langflow Instance**: Your Langflow environment must be running and publicly accessible (e.g., via GitHub Codespaces), with the MCP Server URL and an API Key generated.
-3.  **A Completed Langflow Flow**: A functional flow in Langflow that you want to expose as a tool (like the one created in the previous steps).
-
-### Integration Workflow: A UI-Only Guide
-
-Follow these visual steps to import your Langflow flow and see it working in Orchestrate.
-
-#### Step 1: Begin Importing a New Tool
-
-The process starts from the Orchestrate App Builder UI, where you add a new skill to an agent.
-
-1.  From the agent's **Toolset** page, click the **Add tool** button.
-2.  From the "Add a new tool" dialog, select the **Import** option to connect to an external tool.
-
-    ![Choosing to import a new tool](./assets/orchestrate-import-command.png)
-
-#### Step 2: Select MCP Server Import
-
-Orchestrate provides multiple ways to import a tool.
-
-1.  In the next dialog, select **Import from MCP server** to connect to a live endpoint like the one provided by Langflow.
-
-    ![Adding a new MCP server](./assets/orchestrate-import-mcp.png)
-
-#### Step 3: Add the Langflow MCP Server
-
-Before you can import the tool, you must first register your Langflow MCP server with Orchestrate.
-
-1.  From the "Import or remove tools" screen, click **Add MCP server**.
-
-    ![Selecting the MCP server import option](./assets/orchestrate-import-mcp-create.png)
-
-2.  In the "Add MCP Server" dialog, configure the connection:
-    *   Give your server a memorable **Server name**, like `langflow`.
-    *   In the **Install command** field, paste the `uvx mcp-proxy` command containing the URL and API key you obtained from the Langflow UI. This is how Orchestrate securely connects to your Langflow instance.
-    *   Use the following command, replacing the URL and API key with your URL and API key:
-        ```sh
-        uvx mcp-proxy --headers x-api-key sk-64-8IZMyZKkqpi3J9I1jBv6GgI6YYCfdTV5v7hZi_q0 https://glorious-waffle-g9gp7p4x45hwwpj-7860.app.github.dev/api/v1/mcp/project/612ee268-43ee-45ee-b745-0ce944ed84b1/sse
-        ```
-    *   Click **Connect**.
-
-    <img src="./assets/orchestrate-add-mcp.png" alt="Configuring the Langflow MCP server connection details" width="300">
-
-#### Step 4: Verify and Use the New Skill
-
-Once the MCP server is connected and the tool is imported, it will appear in your agent's **Toolset**.
-
-1.  The `SupportAgent:customer_support_agent` tool is now listed, ready to be used.
-2.  You can test it immediately in the **Preview chat panel**. Ask a question that requires the Langflow agent to act, for example:
-    > "What is the status of order 1001?"
-
-The Orchestrate agent will now delegate the task to your Langflow agent, which will execute its flow and return the final answer directly in the chat.
-
-![The integrated Langflow agent successfully answers a question in the Orchestrate chat UI](./assets/orchestrate-chat.png)
-
-Congratulations! You have successfully integrated a powerful, custom Langflow agent into watsonx Orchestrate using only the user interface.
+Please find a video on this [Linkedin Post](!https://www.linkedin.com/posts/julien-vincent-pradier_sympa-de-voir-arriver-de-nouveaux-coll%C3%A8gues-activity-7392514015291133953-RWIP).

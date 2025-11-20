@@ -6,8 +6,36 @@
         "className": "",
         "data": {
           "sourceHandle": {
+            "dataType": "ChatInput",
+            "id": "ChatInput-1rLUR",
+            "name": "message",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_value",
+            "id": "Agent-8mOXi",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__ChatInput-1rLUR{œdataTypeœ:œChatInputœ,œidœ:œChatInput-1rLURœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}-Agent-8mOXi{œfieldNameœ:œinput_valueœ,œidœ:œAgent-8mOXiœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "ChatInput-1rLUR",
+        "sourceHandle": "{œdataTypeœ:œChatInputœ,œidœ:œChatInput-1rLURœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "Agent-8mOXi",
+        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œAgent-8mOXiœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
             "dataType": "Agent",
-            "id": "Agent-DvfTB",
+            "id": "Agent-8mOXi",
             "name": "response",
             "output_types": [
               "Message"
@@ -15,7 +43,7 @@
           },
           "targetHandle": {
             "fieldName": "input_value",
-            "id": "ChatOutput-YBngH",
+            "id": "ChatOutput-e6YA3",
             "inputTypes": [
               "Data",
               "DataFrame",
@@ -24,124 +52,12 @@
             "type": "other"
           }
         },
-        "id": "reactflow__edge-Agent-DvfTB{œdataTypeœ:œAgentœ,œidœ:œAgent-DvfTBœ,œnameœ:œresponseœ,œoutput_typesœ:[œMessageœ]}-ChatOutput-YBngH{œfieldNameœ:œinput_valueœ,œidœ:œChatOutput-YBngHœ,œinputTypesœ:[œDataœ,œDataFrameœ,œMessageœ],œtypeœ:œotherœ}",
+        "id": "xy-edge__Agent-8mOXi{œdataTypeœ:œAgentœ,œidœ:œAgent-8mOXiœ,œnameœ:œresponseœ,œoutput_typesœ:[œMessageœ]}-ChatOutput-e6YA3{œfieldNameœ:œinput_valueœ,œidœ:œChatOutput-e6YA3œ,œinputTypesœ:[œDataœ,œDataFrameœ,œMessageœ],œtypeœ:œotherœ}",
         "selected": false,
-        "source": "Agent-DvfTB",
-        "sourceHandle": "{œdataTypeœ:œAgentœ,œidœ:œAgent-DvfTBœ,œnameœ:œresponseœ,œoutput_typesœ:[œMessageœ]}",
-        "target": "ChatOutput-YBngH",
-        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œChatOutput-YBngHœ,œinputTypesœ:[œDataœ,œDataFrameœ,œMessageœ],œtypeœ:œotherœ}"
-      },
-      {
-        "animated": false,
-        "className": "",
-        "data": {
-          "sourceHandle": {
-            "dataType": "ChatInput",
-            "id": "ChatInput-aBIso",
-            "name": "message",
-            "output_types": [
-              "Message"
-            ]
-          },
-          "targetHandle": {
-            "fieldName": "input_value",
-            "id": "Agent-DvfTB",
-            "inputTypes": [
-              "Message"
-            ],
-            "type": "str"
-          }
-        },
-        "id": "reactflow__edge-ChatInput-aBIso{œdataTypeœ:œChatInputœ,œidœ:œChatInput-aBIsoœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}-Agent-DvfTB{œfieldNameœ:œinput_valueœ,œidœ:œAgent-DvfTBœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
-        "selected": false,
-        "source": "ChatInput-aBIso",
-        "sourceHandle": "{œdataTypeœ:œChatInputœ,œidœ:œChatInput-aBIsoœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}",
-        "target": "Agent-DvfTB",
-        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œAgent-DvfTBœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
-      },
-      {
-        "animated": false,
-        "className": "",
-        "data": {
-          "sourceHandle": {
-            "dataType": "CalculatorComponent",
-            "id": "CalculatorComponent-qqCfy",
-            "name": "component_as_tool",
-            "output_types": [
-              "Tool"
-            ]
-          },
-          "targetHandle": {
-            "fieldName": "tools",
-            "id": "Agent-DvfTB",
-            "inputTypes": [
-              "Tool"
-            ],
-            "type": "other"
-          }
-        },
-        "id": "reactflow__edge-CalculatorComponent-qqCfy{œdataTypeœ:œCalculatorComponentœ,œidœ:œCalculatorComponent-qqCfyœ,œnameœ:œcomponent_as_toolœ,œoutput_typesœ:[œToolœ]}-Agent-DvfTB{œfieldNameœ:œtoolsœ,œidœ:œAgent-DvfTBœ,œinputTypesœ:[œToolœ],œtypeœ:œotherœ}",
-        "selected": false,
-        "source": "CalculatorComponent-qqCfy",
-        "sourceHandle": "{œdataTypeœ:œCalculatorComponentœ,œidœ:œCalculatorComponent-qqCfyœ,œnameœ:œcomponent_as_toolœ,œoutput_typesœ:[œToolœ]}",
-        "target": "Agent-DvfTB",
-        "targetHandle": "{œfieldNameœ:œtoolsœ,œidœ:œAgent-DvfTBœ,œinputTypesœ:[œToolœ],œtypeœ:œotherœ}"
-      },
-      {
-        "animated": false,
-        "className": "",
-        "data": {
-          "sourceHandle": {
-            "dataType": "URLComponent",
-            "id": "URLComponent-9KKOG",
-            "name": "component_as_tool",
-            "output_types": [
-              "Tool"
-            ]
-          },
-          "targetHandle": {
-            "fieldName": "tools",
-            "id": "Agent-DvfTB",
-            "inputTypes": [
-              "Tool"
-            ],
-            "type": "other"
-          }
-        },
-        "id": "reactflow__edge-URLComponent-9KKOG{œdataTypeœ:œURLComponentœ,œidœ:œURLComponent-9KKOGœ,œnameœ:œcomponent_as_toolœ,œoutput_typesœ:[œToolœ]}-Agent-DvfTB{œfieldNameœ:œtoolsœ,œidœ:œAgent-DvfTBœ,œinputTypesœ:[œToolœ],œtypeœ:œotherœ}",
-        "selected": false,
-        "source": "URLComponent-9KKOG",
-        "sourceHandle": "{œdataTypeœ:œURLComponentœ,œidœ:œURLComponent-9KKOGœ,œnameœ:œcomponent_as_toolœ,œoutput_typesœ:[œToolœ]}",
-        "target": "Agent-DvfTB",
-        "targetHandle": "{œfieldNameœ:œtoolsœ,œidœ:œAgent-DvfTBœ,œinputTypesœ:[œToolœ],œtypeœ:œotherœ}"
-      },
-      {
-        "animated": false,
-        "className": "",
-        "data": {
-          "sourceHandle": {
-            "dataType": "AstraDB",
-            "id": "AstraDB-ZvNyX",
-            "name": "component_as_tool",
-            "output_types": [
-              "Tool"
-            ]
-          },
-          "targetHandle": {
-            "fieldName": "tools",
-            "id": "Agent-DvfTB",
-            "inputTypes": [
-              "Tool"
-            ],
-            "type": "other"
-          }
-        },
-        "id": "reactflow__edge-AstraDB-ZvNyX{œdataTypeœ:œAstraDBœ,œidœ:œAstraDB-ZvNyXœ,œnameœ:œcomponent_as_toolœ,œoutput_typesœ:[œToolœ]}-Agent-DvfTB{œfieldNameœ:œtoolsœ,œidœ:œAgent-DvfTBœ,œinputTypesœ:[œToolœ],œtypeœ:œotherœ}",
-        "selected": false,
-        "source": "AstraDB-ZvNyX",
-        "sourceHandle": "{œdataTypeœ:œAstraDBœ,œidœ:œAstraDB-ZvNyXœ,œnameœ:œcomponent_as_toolœ,œoutput_typesœ:[œToolœ]}",
-        "target": "Agent-DvfTB",
-        "targetHandle": "{œfieldNameœ:œtoolsœ,œidœ:œAgent-DvfTBœ,œinputTypesœ:[œToolœ],œtypeœ:œotherœ}"
+        "source": "Agent-8mOXi",
+        "sourceHandle": "{œdataTypeœ:œAgentœ,œidœ:œAgent-8mOXiœ,œnameœ:œresponseœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "ChatOutput-e6YA3",
+        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œChatOutput-e6YA3œ,œinputTypesœ:[œDataœ,œDataFrameœ,œMessageœ],œtypeœ:œotherœ}"
       },
       {
         "animated": false,
@@ -149,7 +65,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "IBMwatsonxModel",
-            "id": "IBMwatsonxModel-0Mq8t",
+            "id": "IBMwatsonxModel-OjHB6",
             "name": "model_output",
             "output_types": [
               "LanguageModel"
@@ -157,33 +73,357 @@
           },
           "targetHandle": {
             "fieldName": "agent_llm",
-            "id": "Agent-DvfTB",
+            "id": "Agent-8mOXi",
             "inputTypes": [
               "LanguageModel"
             ],
             "type": "str"
           }
         },
-        "id": "xy-edge__IBMwatsonxModel-0Mq8t{œdataTypeœ:œIBMwatsonxModelœ,œidœ:œIBMwatsonxModel-0Mq8tœ,œnameœ:œmodel_outputœ,œoutput_typesœ:[œLanguageModelœ]}-Agent-DvfTB{œfieldNameœ:œagent_llmœ,œidœ:œAgent-DvfTBœ,œinputTypesœ:[œLanguageModelœ],œtypeœ:œstrœ}",
+        "id": "xy-edge__IBMwatsonxModel-OjHB6{œdataTypeœ:œIBMwatsonxModelœ,œidœ:œIBMwatsonxModel-OjHB6œ,œnameœ:œmodel_outputœ,œoutput_typesœ:[œLanguageModelœ]}-Agent-8mOXi{œfieldNameœ:œagent_llmœ,œidœ:œAgent-8mOXiœ,œinputTypesœ:[œLanguageModelœ],œtypeœ:œstrœ}",
         "selected": false,
-        "source": "IBMwatsonxModel-0Mq8t",
-        "sourceHandle": "{œdataTypeœ:œIBMwatsonxModelœ,œidœ:œIBMwatsonxModel-0Mq8tœ,œnameœ:œmodel_outputœ,œoutput_typesœ:[œLanguageModelœ]}",
-        "target": "Agent-DvfTB",
-        "targetHandle": "{œfieldNameœ:œagent_llmœ,œidœ:œAgent-DvfTBœ,œinputTypesœ:[œLanguageModelœ],œtypeœ:œstrœ}"
+        "source": "IBMwatsonxModel-OjHB6",
+        "sourceHandle": "{œdataTypeœ:œIBMwatsonxModelœ,œidœ:œIBMwatsonxModel-OjHB6œ,œnameœ:œmodel_outputœ,œoutput_typesœ:[œLanguageModelœ]}",
+        "target": "Agent-8mOXi",
+        "targetHandle": "{œfieldNameœ:œagent_llmœ,œidœ:œAgent-8mOXiœ,œinputTypesœ:[œLanguageModelœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "CalculatorComponent",
+            "id": "CalculatorComponent-FEWRo",
+            "name": "component_as_tool",
+            "output_types": [
+              "Tool"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "tools",
+            "id": "Agent-8mOXi",
+            "inputTypes": [
+              "Tool"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__CalculatorComponent-FEWRo{œdataTypeœ:œCalculatorComponentœ,œidœ:œCalculatorComponent-FEWRoœ,œnameœ:œcomponent_as_toolœ,œoutput_typesœ:[œToolœ]}-Agent-8mOXi{œfieldNameœ:œtoolsœ,œidœ:œAgent-8mOXiœ,œinputTypesœ:[œToolœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "CalculatorComponent-FEWRo",
+        "sourceHandle": "{œdataTypeœ:œCalculatorComponentœ,œidœ:œCalculatorComponent-FEWRoœ,œnameœ:œcomponent_as_toolœ,œoutput_typesœ:[œToolœ]}",
+        "target": "Agent-8mOXi",
+        "targetHandle": "{œfieldNameœ:œtoolsœ,œidœ:œAgent-8mOXiœ,œinputTypesœ:[œToolœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "URLComponent",
+            "id": "URLComponent-cNqU7",
+            "name": "component_as_tool",
+            "output_types": [
+              "Tool"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "tools",
+            "id": "Agent-8mOXi",
+            "inputTypes": [
+              "Tool"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__URLComponent-cNqU7{œdataTypeœ:œURLComponentœ,œidœ:œURLComponent-cNqU7œ,œnameœ:œcomponent_as_toolœ,œoutput_typesœ:[œToolœ]}-Agent-8mOXi{œfieldNameœ:œtoolsœ,œidœ:œAgent-8mOXiœ,œinputTypesœ:[œToolœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "URLComponent-cNqU7",
+        "sourceHandle": "{œdataTypeœ:œURLComponentœ,œidœ:œURLComponent-cNqU7œ,œnameœ:œcomponent_as_toolœ,œoutput_typesœ:[œToolœ]}",
+        "target": "Agent-8mOXi",
+        "targetHandle": "{œfieldNameœ:œtoolsœ,œidœ:œAgent-8mOXiœ,œinputTypesœ:[œToolœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "AstraDB",
+            "id": "AstraDB-RNjVt",
+            "name": "component_as_tool",
+            "output_types": [
+              "Tool"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "tools",
+            "id": "Agent-8mOXi",
+            "inputTypes": [
+              "Tool"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__AstraDB-RNjVt{œdataTypeœ:œAstraDBœ,œidœ:œAstraDB-RNjVtœ,œnameœ:œcomponent_as_toolœ,œoutput_typesœ:[œToolœ]}-Agent-8mOXi{œfieldNameœ:œtoolsœ,œidœ:œAgent-8mOXiœ,œinputTypesœ:[œToolœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "AstraDB-RNjVt",
+        "sourceHandle": "{œdataTypeœ:œAstraDBœ,œidœ:œAstraDB-RNjVtœ,œnameœ:œcomponent_as_toolœ,œoutput_typesœ:[œToolœ]}",
+        "target": "Agent-8mOXi",
+        "targetHandle": "{œfieldNameœ:œtoolsœ,œidœ:œAgent-8mOXiœ,œinputTypesœ:[œToolœ],œtypeœ:œotherœ}"
       }
     ],
     "nodes": [
       {
         "data": {
-          "description": "Generate text using IBM watsonx.ai foundation models.",
-          "display_name": "IBM watsonx.ai",
-          "id": "IBMwatsonxModel-0Mq8t",
+          "id": "ChatInput-1rLUR",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Get chat inputs from the Playground.",
+            "display_name": "Chat Input",
+            "documentation": "https://docs.langflow.org/components-io#chat-input",
+            "edited": false,
+            "field_order": [
+              "input_value",
+              "should_store_message",
+              "sender",
+              "sender_name",
+              "session_id",
+              "files"
+            ],
+            "frozen": false,
+            "icon": "MessagesSquare",
+            "legacy": false,
+            "lf_version": "1.6.8",
+            "metadata": {},
+            "minimized": true,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Chat Message",
+                "group_outputs": false,
+                "method": "message_response",
+                "name": "message",
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.base.data.utils import IMG_FILE_TYPES, TEXT_FILE_TYPES\nfrom langflow.base.io.chat import ChatComponent\nfrom langflow.inputs.inputs import BoolInput\nfrom langflow.io import (\n    DropdownInput,\n    FileInput,\n    MessageTextInput,\n    MultilineInput,\n    Output,\n)\nfrom langflow.schema.message import Message\nfrom langflow.utils.constants import (\n    MESSAGE_SENDER_AI,\n    MESSAGE_SENDER_NAME_USER,\n    MESSAGE_SENDER_USER,\n)\n\n\nclass ChatInput(ChatComponent):\n    display_name = \"Chat Input\"\n    description = \"Get chat inputs from the Playground.\"\n    documentation: str = \"https://docs.langflow.org/components-io#chat-input\"\n    icon = \"MessagesSquare\"\n    name = \"ChatInput\"\n    minimized = True\n\n    inputs = [\n        MultilineInput(\n            name=\"input_value\",\n            display_name=\"Input Text\",\n            value=\"\",\n            info=\"Message to be passed as input.\",\n            input_types=[],\n        ),\n        BoolInput(\n            name=\"should_store_message\",\n            display_name=\"Store Messages\",\n            info=\"Store the message in the history.\",\n            value=True,\n            advanced=True,\n        ),\n        DropdownInput(\n            name=\"sender\",\n            display_name=\"Sender Type\",\n            options=[MESSAGE_SENDER_AI, MESSAGE_SENDER_USER],\n            value=MESSAGE_SENDER_USER,\n            info=\"Type of sender.\",\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"sender_name\",\n            display_name=\"Sender Name\",\n            info=\"Name of the sender.\",\n            value=MESSAGE_SENDER_NAME_USER,\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"session_id\",\n            display_name=\"Session ID\",\n            info=\"The session ID of the chat. If empty, the current session ID parameter will be used.\",\n            advanced=True,\n        ),\n        FileInput(\n            name=\"files\",\n            display_name=\"Files\",\n            file_types=TEXT_FILE_TYPES + IMG_FILE_TYPES,\n            info=\"Files to be sent with the message.\",\n            advanced=True,\n            is_list=True,\n            temp_file=True,\n        ),\n    ]\n    outputs = [\n        Output(display_name=\"Chat Message\", name=\"message\", method=\"message_response\"),\n    ]\n\n    async def message_response(self) -> Message:\n        # Ensure files is a list and filter out empty/None values\n        files = self.files if self.files else []\n        if files and not isinstance(files, list):\n            files = [files]\n        files = [f for f in files if f is not None and f != \"\"]\n\n        message = await Message.create(\n            text=self.input_value,\n            sender=self.sender,\n            sender_name=self.sender_name,\n            session_id=self.session_id,\n            files=files,\n        )\n        if self.session_id and isinstance(message, Message) and self.should_store_message:\n            stored_message = await self.send_message(\n                message,\n            )\n            self.message.value = stored_message\n            message = stored_message\n\n        self.status = message\n        return message\n"
+              },
+              "files": {
+                "_input_type": "FileInput",
+                "advanced": true,
+                "display_name": "Files",
+                "dynamic": false,
+                "fileTypes": [
+                  "csv",
+                  "json",
+                  "pdf",
+                  "txt",
+                  "md",
+                  "mdx",
+                  "yaml",
+                  "yml",
+                  "xml",
+                  "html",
+                  "htm",
+                  "docx",
+                  "py",
+                  "sh",
+                  "sql",
+                  "js",
+                  "ts",
+                  "tsx",
+                  "jpg",
+                  "jpeg",
+                  "png",
+                  "bmp",
+                  "image"
+                ],
+                "file_path": "",
+                "info": "Files to be sent with the message.",
+                "list": true,
+                "list_add_label": "Add More",
+                "name": "files",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "temp_file": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "file",
+                "value": ""
+              },
+              "input_value": {
+                "_input_type": "MultilineInput",
+                "advanced": false,
+                "copy_field": false,
+                "display_name": "Input Text",
+                "dynamic": false,
+                "info": "Message to be passed as input.",
+                "input_types": [],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "input_value",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "What are your shipping times?"
+              },
+              "sender": {
+                "_input_type": "DropdownInput",
+                "advanced": true,
+                "combobox": false,
+                "dialog_inputs": {},
+                "display_name": "Sender Type",
+                "dynamic": false,
+                "external_options": {},
+                "info": "Type of sender.",
+                "name": "sender",
+                "options": [
+                  "Machine",
+                  "User"
+                ],
+                "options_metadata": [],
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "User"
+              },
+              "sender_name": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Sender Name",
+                "dynamic": false,
+                "info": "Name of the sender.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "sender_name",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "User"
+              },
+              "session_id": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Session ID",
+                "dynamic": false,
+                "info": "The session ID of the chat. If empty, the current session ID parameter will be used.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "session_id",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "should_store_message": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "Store Messages",
+                "dynamic": false,
+                "info": "Store the message in the history.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "should_store_message",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": true
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "ChatInput"
+        },
+        "dragging": false,
+        "id": "ChatInput-1rLUR",
+        "measured": {
+          "height": 204,
+          "width": 320
+        },
+        "position": {
+          "x": 26.717358731021733,
+          "y": 684.6100319213602
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "IBMwatsonxModel-OjHB6",
           "node": {
             "base_classes": [
               "LanguageModel",
               "Message"
             ],
             "beta": false,
+            "category": "ibm",
             "conditional_paths": [],
             "custom_fields": {},
             "description": "Generate text using IBM watsonx.ai foundation models.",
@@ -211,9 +451,10 @@
             ],
             "frozen": false,
             "icon": "WatsonxAI",
-            "last_updated": "2025-11-06T13:26:16.552Z",
+            "key": "IBMwatsonxModel",
+            "last_updated": "2025-11-20T12:52:19.034Z",
             "legacy": false,
-            "lf_version": "1.6.5",
+            "lf_version": "1.6.8",
             "metadata": {
               "keywords": [
                 "model",
@@ -234,7 +475,6 @@
                 "name": "text_output",
                 "options": null,
                 "required_inputs": null,
-                "selected": "Message",
                 "tool_mode": true,
                 "types": [
                   "Message"
@@ -259,6 +499,7 @@
               }
             ],
             "pinned": false,
+            "score": 0.3008244520096751,
             "template": {
               "_type": "Component",
               "api_key": {
@@ -276,7 +517,7 @@
                 "show": true,
                 "title_case": false,
                 "type": "str",
-                "value": ""
+                "value": "WATSONX_API_KEY"
               },
               "code": {
                 "advanced": true,
@@ -417,16 +658,13 @@
                 "dynamic": true,
                 "external_options": {},
                 "info": "",
-                "load_from_db": false,
                 "name": "model_name",
                 "options": [
                   "ibm/granite-3-2-8b-instruct",
-                  "ibm/granite-3-2b-instruct",
                   "ibm/granite-3-3-8b-instruct",
                   "ibm/granite-3-8b-instruct",
                   "ibm/granite-4-h-small",
                   "ibm/granite-guardian-3-8b",
-                  "ibm/granite-vision-3-2-2b",
                   "meta-llama/llama-3-2-11b-vision-instruct",
                   "meta-llama/llama-3-2-90b-vision-instruct",
                   "meta-llama/llama-3-3-70b-instruct",
@@ -664,7 +902,6 @@
                 "dynamic": false,
                 "external_options": {},
                 "info": "The base URL of the API.",
-                "load_from_db": false,
                 "name": "url",
                 "options": [
                   "https://us-south.ml.cloud.ibm.com",
@@ -694,273 +931,27 @@
           "type": "IBMwatsonxModel"
         },
         "dragging": false,
-        "id": "IBMwatsonxModel-0Mq8t",
+        "id": "IBMwatsonxModel-OjHB6",
         "measured": {
           "height": 632,
           "width": 320
         },
         "position": {
-          "x": 121.9265547148488,
-          "y": 46.74688484403245
-        },
-        "selected": true,
-        "type": "genericNode"
-      },
-      {
-        "data": {
-          "description": "Get chat inputs from the Playground.",
-          "display_name": "Chat Input",
-          "id": "ChatInput-aBIso",
-          "node": {
-            "base_classes": [
-              "Message"
-            ],
-            "beta": false,
-            "conditional_paths": [],
-            "custom_fields": {},
-            "description": "Get chat inputs from the Playground.",
-            "display_name": "Chat Input",
-            "documentation": "https://docs.langflow.org/components-io#chat-input",
-            "edited": false,
-            "field_order": [
-              "input_value",
-              "should_store_message",
-              "sender",
-              "sender_name",
-              "session_id",
-              "files"
-            ],
-            "frozen": false,
-            "icon": "MessagesSquare",
-            "legacy": false,
-            "lf_version": "1.6.5",
-            "metadata": {},
-            "minimized": true,
-            "output_types": [],
-            "outputs": [
-              {
-                "allows_loop": false,
-                "cache": true,
-                "display_name": "Chat Message",
-                "group_outputs": false,
-                "method": "message_response",
-                "name": "message",
-                "options": null,
-                "required_inputs": null,
-                "selected": "Message",
-                "tool_mode": true,
-                "types": [
-                  "Message"
-                ],
-                "value": "__UNDEFINED__"
-              }
-            ],
-            "pinned": false,
-            "template": {
-              "_type": "Component",
-              "code": {
-                "advanced": true,
-                "dynamic": true,
-                "fileTypes": [],
-                "file_path": "",
-                "info": "",
-                "list": false,
-                "load_from_db": false,
-                "multiline": true,
-                "name": "code",
-                "password": false,
-                "placeholder": "",
-                "required": true,
-                "show": true,
-                "title_case": false,
-                "type": "code",
-                "value": "from langflow.base.data.utils import IMG_FILE_TYPES, TEXT_FILE_TYPES\nfrom langflow.base.io.chat import ChatComponent\nfrom langflow.inputs.inputs import BoolInput\nfrom langflow.io import (\n    DropdownInput,\n    FileInput,\n    MessageTextInput,\n    MultilineInput,\n    Output,\n)\nfrom langflow.schema.message import Message\nfrom langflow.utils.constants import (\n    MESSAGE_SENDER_AI,\n    MESSAGE_SENDER_NAME_USER,\n    MESSAGE_SENDER_USER,\n)\n\n\nclass ChatInput(ChatComponent):\n    display_name = \"Chat Input\"\n    description = \"Get chat inputs from the Playground.\"\n    documentation: str = \"https://docs.langflow.org/components-io#chat-input\"\n    icon = \"MessagesSquare\"\n    name = \"ChatInput\"\n    minimized = True\n\n    inputs = [\n        MultilineInput(\n            name=\"input_value\",\n            display_name=\"Input Text\",\n            value=\"\",\n            info=\"Message to be passed as input.\",\n            input_types=[],\n        ),\n        BoolInput(\n            name=\"should_store_message\",\n            display_name=\"Store Messages\",\n            info=\"Store the message in the history.\",\n            value=True,\n            advanced=True,\n        ),\n        DropdownInput(\n            name=\"sender\",\n            display_name=\"Sender Type\",\n            options=[MESSAGE_SENDER_AI, MESSAGE_SENDER_USER],\n            value=MESSAGE_SENDER_USER,\n            info=\"Type of sender.\",\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"sender_name\",\n            display_name=\"Sender Name\",\n            info=\"Name of the sender.\",\n            value=MESSAGE_SENDER_NAME_USER,\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"session_id\",\n            display_name=\"Session ID\",\n            info=\"The session ID of the chat. If empty, the current session ID parameter will be used.\",\n            advanced=True,\n        ),\n        FileInput(\n            name=\"files\",\n            display_name=\"Files\",\n            file_types=TEXT_FILE_TYPES + IMG_FILE_TYPES,\n            info=\"Files to be sent with the message.\",\n            advanced=True,\n            is_list=True,\n            temp_file=True,\n        ),\n    ]\n    outputs = [\n        Output(display_name=\"Chat Message\", name=\"message\", method=\"message_response\"),\n    ]\n\n    async def message_response(self) -> Message:\n        # Ensure files is a list and filter out empty/None values\n        files = self.files if self.files else []\n        if files and not isinstance(files, list):\n            files = [files]\n        files = [f for f in files if f is not None and f != \"\"]\n\n        message = await Message.create(\n            text=self.input_value,\n            sender=self.sender,\n            sender_name=self.sender_name,\n            session_id=self.session_id,\n            files=files,\n        )\n        if self.session_id and isinstance(message, Message) and self.should_store_message:\n            stored_message = await self.send_message(\n                message,\n            )\n            self.message.value = stored_message\n            message = stored_message\n\n        self.status = message\n        return message\n"
-              },
-              "files": {
-                "_input_type": "FileInput",
-                "advanced": true,
-                "display_name": "Files",
-                "dynamic": false,
-                "fileTypes": [
-                  "csv",
-                  "json",
-                  "pdf",
-                  "txt",
-                  "md",
-                  "mdx",
-                  "yaml",
-                  "yml",
-                  "xml",
-                  "html",
-                  "htm",
-                  "docx",
-                  "py",
-                  "sh",
-                  "sql",
-                  "js",
-                  "ts",
-                  "tsx",
-                  "jpg",
-                  "jpeg",
-                  "png",
-                  "bmp",
-                  "image"
-                ],
-                "file_path": "",
-                "info": "Files to be sent with the message.",
-                "list": true,
-                "list_add_label": "Add More",
-                "name": "files",
-                "placeholder": "",
-                "required": false,
-                "show": true,
-                "temp_file": true,
-                "title_case": false,
-                "trace_as_metadata": true,
-                "type": "file",
-                "value": ""
-              },
-              "input_value": {
-                "_input_type": "MultilineInput",
-                "advanced": false,
-                "copy_field": false,
-                "display_name": "Input Text",
-                "dynamic": false,
-                "info": "Message to be passed as input.",
-                "input_types": [],
-                "list": false,
-                "list_add_label": "Add More",
-                "load_from_db": false,
-                "multiline": true,
-                "name": "input_value",
-                "placeholder": "",
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "tool_mode": false,
-                "trace_as_input": true,
-                "trace_as_metadata": true,
-                "type": "str",
-                "value": ""
-              },
-              "sender": {
-                "_input_type": "DropdownInput",
-                "advanced": true,
-                "combobox": false,
-                "dialog_inputs": {},
-                "display_name": "Sender Type",
-                "dynamic": false,
-                "external_options": {},
-                "info": "Type of sender.",
-                "name": "sender",
-                "options": [
-                  "Machine",
-                  "User"
-                ],
-                "options_metadata": [],
-                "placeholder": "",
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "toggle": false,
-                "tool_mode": false,
-                "trace_as_metadata": true,
-                "type": "str",
-                "value": "User"
-              },
-              "sender_name": {
-                "_input_type": "MessageTextInput",
-                "advanced": true,
-                "display_name": "Sender Name",
-                "dynamic": false,
-                "info": "Name of the sender.",
-                "input_types": [
-                  "Message"
-                ],
-                "list": false,
-                "list_add_label": "Add More",
-                "load_from_db": false,
-                "name": "sender_name",
-                "placeholder": "",
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "tool_mode": false,
-                "trace_as_input": true,
-                "trace_as_metadata": true,
-                "type": "str",
-                "value": "User"
-              },
-              "session_id": {
-                "_input_type": "MessageTextInput",
-                "advanced": true,
-                "display_name": "Session ID",
-                "dynamic": false,
-                "info": "The session ID of the chat. If empty, the current session ID parameter will be used.",
-                "input_types": [
-                  "Message"
-                ],
-                "list": false,
-                "list_add_label": "Add More",
-                "load_from_db": false,
-                "name": "session_id",
-                "placeholder": "",
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "tool_mode": false,
-                "trace_as_input": true,
-                "trace_as_metadata": true,
-                "type": "str",
-                "value": ""
-              },
-              "should_store_message": {
-                "_input_type": "BoolInput",
-                "advanced": true,
-                "display_name": "Store Messages",
-                "dynamic": false,
-                "info": "Store the message in the history.",
-                "list": false,
-                "list_add_label": "Add More",
-                "name": "should_store_message",
-                "placeholder": "",
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "tool_mode": false,
-                "trace_as_metadata": true,
-                "type": "bool",
-                "value": true
-              }
-            },
-            "tool_mode": false
-          },
-          "showNode": true,
-          "type": "ChatInput"
-        },
-        "dragging": false,
-        "id": "ChatInput-aBIso",
-        "measured": {
-          "height": 204,
-          "width": 320
-        },
-        "position": {
-          "x": 139.50052659961284,
-          "y": 862.2707620503744
+          "x": 964.3313360798239,
+          "y": -136.29123073525142
         },
         "selected": false,
         "type": "genericNode"
       },
       {
         "data": {
-          "description": "Display a chat message in the Playground.",
-          "display_name": "Chat Output",
-          "id": "ChatOutput-YBngH",
+          "id": "ChatOutput-e6YA3",
           "node": {
             "base_classes": [
               "Message"
             ],
             "beta": false,
+            "category": "input_output",
             "conditional_paths": [],
             "custom_fields": {},
             "description": "Display a chat message in the Playground.",
@@ -977,8 +968,9 @@
             ],
             "frozen": false,
             "icon": "MessagesSquare",
+            "key": "ChatOutput",
             "legacy": false,
-            "lf_version": "1.6.5",
+            "lf_version": "1.6.8",
             "metadata": {},
             "minimized": true,
             "output_types": [],
@@ -990,8 +982,6 @@
                 "group_outputs": false,
                 "method": "message_response",
                 "name": "message",
-                "options": null,
-                "required_inputs": null,
                 "selected": "Message",
                 "tool_mode": true,
                 "types": [
@@ -1001,6 +991,7 @@
               }
             ],
             "pinned": false,
+            "score": 0.003169567463043492,
             "template": {
               "_type": "Component",
               "code": {
@@ -1158,32 +1149,31 @@
             },
             "tool_mode": false
           },
-          "showNode": true,
+          "showNode": false,
           "type": "ChatOutput"
         },
         "dragging": false,
-        "id": "ChatOutput-YBngH",
+        "id": "ChatOutput-e6YA3",
         "measured": {
-          "height": 166,
-          "width": 320
+          "height": 48,
+          "width": 192
         },
         "position": {
-          "x": 1471.6554949611495,
-          "y": 508.70126351162526
+          "x": 1370.8826876645835,
+          "y": 901.3532053385944
         },
         "selected": false,
         "type": "genericNode"
       },
       {
         "data": {
-          "description": "Define the agent's instructions, then enter a task to complete using tools.",
-          "display_name": "Agent",
-          "id": "Agent-DvfTB",
+          "id": "Agent-8mOXi",
           "node": {
             "base_classes": [
               "Message"
             ],
             "beta": false,
+            "category": "agents",
             "conditional_paths": [],
             "custom_fields": {},
             "description": "Define the agent's instructions, then enter a task to complete using tools.",
@@ -1215,9 +1205,10 @@
             ],
             "frozen": false,
             "icon": "bot",
-            "last_updated": "2025-11-06T13:24:49.972Z",
+            "key": "Agent",
+            "last_updated": "2025-11-20T14:56:46.945Z",
             "legacy": false,
-            "lf_version": "1.6.5",
+            "lf_version": "1.6.8",
             "metadata": {},
             "minimized": false,
             "output_types": [],
@@ -1240,6 +1231,7 @@
               }
             ],
             "pinned": false,
+            "score": 1.1732828199964098e-19,
             "template": {
               "_type": "Component",
               "add_current_date_tool": {
@@ -1569,7 +1561,7 @@
                 "trace_as_input": true,
                 "trace_as_metadata": true,
                 "type": "str",
-                "value": "You are a helpful assistant that can use tools to answer questions and perform tasks."
+                "value": "You are a helpful assistant from ACME company that can use tools to answer questions and perform tasks.\nYou must make use of the tools provided to generate responses especially the vector search tool when being asked question about ACME policies\nWhen any of the tools don't provide a response, say \"I'm sorry, I can't help with that\"."
               },
               "tools": {
                 "_input_type": "HandleInput",
@@ -1617,21 +1609,21 @@
           "type": "Agent"
         },
         "dragging": false,
-        "id": "Agent-DvfTB",
+        "id": "Agent-8mOXi",
         "measured": {
           "height": 429,
           "width": 320
         },
         "position": {
-          "x": 1022.7144113285337,
-          "y": 418.7762586064147
+          "x": 976.5748030596752,
+          "y": 521.6793169032202
         },
-        "selected": false,
+        "selected": true,
         "type": "genericNode"
       },
       {
         "data": {
-          "id": "CalculatorComponent-qqCfy",
+          "id": "CalculatorComponent-FEWRo",
           "node": {
             "base_classes": [
               "Data"
@@ -1650,9 +1642,9 @@
             "frozen": false,
             "icon": "calculator",
             "key": "CalculatorComponent",
-            "last_updated": "2025-11-06T13:23:54.987Z",
+            "last_updated": "2025-11-20T14:56:46.834Z",
             "legacy": false,
-            "lf_version": "1.6.5",
+            "lf_version": "1.6.8",
             "metadata": {},
             "minimized": false,
             "output_types": [],
@@ -1766,29 +1758,28 @@
           "type": "CalculatorComponent"
         },
         "dragging": false,
-        "id": "CalculatorComponent-qqCfy",
+        "id": "CalculatorComponent-FEWRo",
         "measured": {
           "height": 218,
           "width": 320
         },
         "position": {
-          "x": 578.5094341007909,
-          "y": 320.55281717137956
+          "x": 517.4798699766609,
+          "y": 47.40254744910601
         },
         "selected": false,
         "type": "genericNode"
       },
       {
         "data": {
-          "description": "Fetch content from one or more web pages, following links recursively.",
-          "display_name": "URL",
-          "id": "URLComponent-9KKOG",
+          "id": "URLComponent-cNqU7",
           "node": {
             "base_classes": [
               "DataFrame",
               "Message"
             ],
             "beta": false,
+            "category": "data",
             "conditional_paths": [],
             "custom_fields": {},
             "description": "Fetch content from one or more web pages, following links recursively.",
@@ -1810,8 +1801,10 @@
             ],
             "frozen": false,
             "icon": "layout-template",
+            "key": "URLComponent",
+            "last_updated": "2025-11-20T14:56:46.835Z",
             "legacy": false,
-            "lf_version": "1.6.5",
+            "lf_version": "1.6.8",
             "metadata": {},
             "minimized": false,
             "output_types": [],
@@ -1835,6 +1828,7 @@
               }
             ],
             "pinned": false,
+            "score": 2.220446049250313e-16,
             "template": {
               "_type": "Component",
               "autoset_encoding": {
@@ -2164,23 +2158,21 @@
           "type": "URLComponent"
         },
         "dragging": false,
-        "id": "URLComponent-9KKOG",
+        "id": "URLComponent-cNqU7",
         "measured": {
           "height": 290,
           "width": 320
         },
         "position": {
-          "x": 579.6970443038384,
-          "y": 612.8429275444767
+          "x": 516.0218605978444,
+          "y": 330.25636693952214
         },
         "selected": false,
         "type": "genericNode"
       },
       {
         "data": {
-          "description": "Ingest and search documents in Astra DB",
-          "display_name": "Astra DB",
-          "id": "AstraDB-ZvNyX",
+          "id": "AstraDB-RNjVt",
           "node": {
             "base_classes": [
               "Data",
@@ -2188,9 +2180,10 @@
               "VectorStore"
             ],
             "beta": false,
+            "category": "datastax",
             "conditional_paths": [],
             "custom_fields": {},
-            "description": "Ingest and search documents in Astra DB",
+            "description": "Answer frequently asked questions (FAQs) about shipping, returns, placing orders, and more",
             "display_name": "Astra DB",
             "documentation": "https://docs.datastax.com/en/langflow/astra-components.html",
             "edited": false,
@@ -2220,9 +2213,10 @@
             ],
             "frozen": false,
             "icon": "AstraDB",
-            "last_updated": "2025-11-06T13:31:39.281Z",
+            "key": "AstraDB",
+            "last_updated": "2025-11-20T14:56:46.835Z",
             "legacy": false,
-            "lf_version": "1.6.5",
+            "lf_version": "1.6.8",
             "metadata": {},
             "minimized": false,
             "output_types": [],
@@ -2246,6 +2240,7 @@
               }
             ],
             "pinned": false,
+            "score": 0.007568328950209746,
             "template": {
               "_type": "Component",
               "advanced_search_filter": {
@@ -2278,7 +2273,7 @@
                 "info": "The API Endpoint for the Astra DB instance. Supercedes database selection.",
                 "name": "api_endpoint",
                 "options": [
-                  "https://70350cb1-ec3a-4cce-b28e-7299e62dd4a6-us-east-2.apps.astra.datastax.com"
+                  "https://257feed1-8b76-435d-b919-9f5c4a837b76-us-east-2.apps.astra.datastax.com"
                 ],
                 "options_metadata": [],
                 "placeholder": "",
@@ -2289,7 +2284,7 @@
                 "tool_mode": false,
                 "trace_as_metadata": true,
                 "type": "str",
-                "value": "https://70350cb1-ec3a-4cce-b28e-7299e62dd4a6-us-east-2.apps.astra.datastax.com"
+                "value": "https://257feed1-8b76-435d-b919-9f5c4a837b76-us-east-2.apps.astra.datastax.com"
               },
               "astradb_vectorstore_kwargs": {
                 "_input_type": "NestedDictInput",
@@ -2391,7 +2386,7 @@
                             "display_name": "Embedding generation method",
                             "dynamic": false,
                             "external_options": {},
-                            "helper_text": "To create collections with more embedding provider options, go to <a class=\"underline\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://astra.datastax.com/org/dde0aee7-61c9-499c-8ff6-2449a18cb8ff/database/70350cb1-ec3a-4cce-b28e-7299e62dd4a6/data-explorer?createCollection=1&namespace=default_keyspace\">your database in Astra DB</a>.",
+                            "helper_text": "To create collections with more embedding provider options, go to <a class=\"underline\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://astra.datastax.com/org/233a4f20-0f1a-498f-9c4f-677f8f450317/database/257feed1-8b76-435d-b919-9f5c4a837b76/data-explorer?createCollection=1&namespace=default_keyspace\">your database in Astra DB</a>.",
                             "info": "Provider to use for generating embeddings.",
                             "name": "embedding_generation_provider",
                             "options": [
@@ -2473,27 +2468,34 @@
                 "name": "collection_name",
                 "options": [
                   "company_faq",
-                  "orders",
-                  "products"
+                  "julien_collection",
+                  "langflow_rag_collection",
+                  "visa_info"
                 ],
                 "options_metadata": [
                   {
                     "icon": "NVIDIA",
+                    "model": "NV-Embed-QA",
+                    "provider": "nvidia",
+                    "records": 0
+                  },
+                  {
+                    "icon": "NVIDIA",
                     "model": "nvidia/nv-embedqa-e5-v5",
                     "provider": "nvidia",
-                    "records": 4
+                    "records": 0
                   },
                   {
                     "icon": "vectorstores",
                     "model": null,
                     "provider": null,
-                    "records": 5
+                    "records": 208
                   },
                   {
-                    "icon": "vectorstores",
-                    "model": null,
-                    "provider": null,
-                    "records": 8
+                    "icon": "NVIDIA",
+                    "model": "nvidia/nv-embedqa-e5-v5",
+                    "provider": "nvidia",
+                    "records": 2701
                   }
                 ],
                 "placeholder": "",
@@ -2624,18 +2626,18 @@
                 "info": "The Database name for the Astra DB instance.",
                 "name": "database_name",
                 "options": [
-                  "workshop"
+                  "jpradier_astradb"
                 ],
                 "options_metadata": [
                   {
                     "api_endpoints": [
-                      "https://70350cb1-ec3a-4cce-b28e-7299e62dd4a6-us-east-2.apps.astra.datastax.com"
+                      "https://257feed1-8b76-435d-b919-9f5c4a837b76-us-east-2.apps.astra.datastax.com"
                     ],
-                    "collections": 3,
+                    "collections": 4,
                     "keyspaces": [
                       "default_keyspace"
                     ],
-                    "org_id": "dde0aee7-61c9-499c-8ff6-2449a18cb8ff",
+                    "org_id": "233a4f20-0f1a-498f-9c4f-677f8f450317",
                     "status": null
                   }
                 ],
@@ -2649,7 +2651,7 @@
                 "tool_mode": false,
                 "trace_as_metadata": true,
                 "type": "str",
-                "value": "workshop"
+                "value": "jpradier_astradb"
               },
               "deletion_field": {
                 "_input_type": "StrInput",
@@ -2765,7 +2767,6 @@
                 "dynamic": false,
                 "external_options": {},
                 "info": "Optional keyspace within Astra DB to use for the collection.",
-                "load_from_db": false,
                 "name": "keyspace",
                 "options": [
                   "default_keyspace"
@@ -2833,7 +2834,6 @@
                 "dynamic": false,
                 "external_options": {},
                 "info": "Post-retrieval model that re-scores results for optimal relevance ranking.",
-                "load_from_db": false,
                 "name": "reranker",
                 "options": [
                   "nvidia/llama-3.2-nv-rerankqa-1b-v2"
@@ -2864,7 +2864,6 @@
                 "dynamic": false,
                 "external_options": {},
                 "info": "Determine how your content is matched: Vector finds semantic similarity, and Hybrid Search (suggested) combines both approaches with a reranker.",
-                "load_from_db": false,
                 "name": "search_method",
                 "options": [
                   "Hybrid Search",
@@ -2990,7 +2989,7 @@
                 "show": true,
                 "title_case": false,
                 "type": "str",
-                "value": ""
+                "value": "ASTRA_DB_APPLICATION_TOKEN"
               },
               "tools_metadata": {
                 "_input_type": "ToolsInput",
@@ -3019,7 +3018,7 @@
                         "type": "string"
                       }
                     },
-                    "description": "Answer frequently asked questions (FAQs) about shipping, returns, placing orders, and more",
+                    "description": "Ingest and search documents in Astra DB",
                     "display_description": "Ingest and search documents in Astra DB",
                     "display_name": "search_documents",
                     "name": "search_documents",
@@ -3038,7 +3037,7 @@
                         "type": "string"
                       }
                     },
-                    "description": "Answer frequently asked questions (FAQs) about shipping, returns, placing orders, and more",
+                    "description": "Ingest and search documents in Astra DB",
                     "display_description": "Ingest and search documents in Astra DB",
                     "display_name": "as_dataframe",
                     "name": "as_dataframe",
@@ -3057,7 +3056,7 @@
                         "type": "string"
                       }
                     },
-                    "description": "Answer frequently asked questions (FAQs) about shipping, returns, placing orders, and more",
+                    "description": "Ingest and search documents in Astra DB",
                     "display_description": "Ingest and search documents in Astra DB",
                     "display_name": "as_vector_store",
                     "name": "as_vector_store",
@@ -3077,30 +3076,30 @@
           "type": "AstraDB"
         },
         "dragging": false,
-        "id": "AstraDB-ZvNyX",
+        "id": "AstraDB-RNjVt",
         "measured": {
-          "height": 675,
+          "height": 691,
           "width": 320
         },
         "position": {
-          "x": -242.61548882993242,
-          "y": 359.278165014629
+          "x": 513.407991439241,
+          "y": 696.7482187600693
         },
         "selected": false,
         "type": "genericNode"
       }
     ],
     "viewport": {
-      "x": 136.44190764618224,
-      "y": 29.09603103129041,
-      "zoom": 0.5534779264860246
+      "x": 144.52347871822565,
+      "y": -38.53084802307785,
+      "zoom": 0.5811878662430633
     }
   },
   "description": "Harness the Power of Conversational AI.",
   "endpoint_name": null,
-  "id": "1a49bcdb-8b08-4301-800d-bb037ee8904c",
+  "id": "683acb21-18cb-4d47-87b4-79509cdee504",
   "is_component": false,
-  "last_tested_version": "1.6.5",
+  "last_tested_version": "1.6.8",
   "name": "RAG Agentic AI",
   "tags": []
 }
