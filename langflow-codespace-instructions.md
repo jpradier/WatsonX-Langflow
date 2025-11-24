@@ -46,4 +46,6 @@ To make life easier, we'll use the awesome Github Codespace functionality. Githu
     ![codespace-public-port](./assets/codespace-public-port.png)
 
 🎉 Congrats! You finished the set-up part of the workshop. Now for the fun part!
+----
+
 <-- Go back to the [Langflow Lab instructions](./README.md)
