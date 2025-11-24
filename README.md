@@ -1,5 +1,19 @@
 # 🧠 Langflow Agentic AI Workshop – Customer Support Agent
 
+## 📋 Table of Contents
+- [🎯 Goal of the workshop](#-goal-of-the-workshop)
+- [🛠️ Prerequisites](#️-prerequisites)
+  - [Sign up for DataStax Astra DB](#sign-up-for-datastax-astra-db)
+  - [Sign up for IBM watsonx.ai](#sign-up-for-ibm-watsonxai)
+  - [Get access to Langflow](#get-access-to-langflow)
+- [🚀 Workshop follow-along](#-workshop-follow-along)
+  - [1. 🧱 Setup of a simple Langflow Chatbot](#1--setup-of-a-simple-langflow-chatbot)
+  - [2. 🧭 Familiarize yourself with Langflow](#2--familiarize-yourself-with-langflow)
+  - [3. 🧠 Agentic AI with Langflow](#3--agentic-ai-with-langflow)
+  - [4. 📚 Retrieval-Augmented Generation (RAG) with Astra DB](#4--retrieval-augmented-generation-rag-with-astra-db)
+  - [5. 📈 Adding structured data](#5--adding-structured-data)
+- [📦 Summary - Time to wrap-up !!](#-summary---time-to-wrap-up-)
+
 ## 🎯 Goal of the workshop
 Learn how to build a powerful, intelligent customer support agent using **DataStax Langflow**. You’ll start by creating a simple chatbot with **watsonx.ai** (IBM's generative AI platform), then enrich it with retrieval-augmented generation (RAG) by connecting it to your own FAQ knowledge base using **DataStax Astra DB**. Finally, you’ll add tools such as order lookups, product info access, calculators, and web tools to make your agent truly agentic—capable of reasoning, taking actions, and handling real-world customer support scenarios.
 
@@ -55,60 +69,40 @@ Make sure you have a vector-capable Astra database (get one for free at [astra.d
 There are several ways to gain access to Langflow. Pick the one that suits you best 😊:
 - [Managed Langflow on Astra](https://astra.datastax.com/langflow)
 - [Langflow desktop](https://www.langflow.org/desktop) (currently only for Mac)
-- (for techies 🤩) Just follow the instructions and use Github Codespaces in this tutorial
+- [Langlow on GitHub Codespace or Local](./langflow-codespace-instructions.md) Just follow the instructions and use Github Codespaces in this tutorial (for techies 🤩)
 
 Last two ones require some download time (be aware - 10 to 15 minutes)
 
-### ⚡️ Follow these instructions to access Langflow on Github Codespaces
-To make life easier, we'll use the awesome Github Codespace functionality. Github offers you a smooth cloud-based developer experience to get started quickly. How?
+Whatever your choice, at the end, you should get access to the Langflow Welcome Screen
 
-1. Open the [watsonx-langflow-agent](https://github.com/jpradier/WatsonX-Langflow) repository
-2. Click on `Use this template`->`Open in a codespace` as follows:
+<img src="./assets/langflow-welcome-screen.png" height="250" />
 
-    ![github-open-in-codespace](./assets/github-open-in-codespace.png)
+One last setup, if you want to go faster during the Lab, is to setup Global Variables within Langflow.
+Just click on your login icon (upper right corner), and select settings:
 
-    🎉 Congratulations, you just started your cloud IDE in which we'll work from here.
+<img alt="langflow-settings" src="./assets/langflow-settings.png" height="150" />
 
-    💡 In case you want to keep you changes, you can also opt to 'fork' the repo by clicking `Create a new repository`. This will also enable you to check out the code locally and run from your own machine.  
 
-5. Configure the secrets as follows:
+Then access the **Global Variables** pane, depending on your environment, some variables might be already setup:
 
-- Copy `.env.example` and then paste it. Now rename the copy to `.env`
+<img alt="langflow-global-variables" src="./assets/langflow-global-variables.png" height="150" />
 
-    ![codespace](./assets/codespaces.png)
+Add the missing ones, you should have 4 global variables to complete the Labs:
+- `WATSONX_PROJECT_ID` (your watsonx.ai project ID)
+- `WATSONX_API_KEY` (your watsonx.ai API key)
+- `ASTRA_DB_API_ENDPOINT` (your Astra DB endpoint https://*****.apps.astra.datastax.com)
+- `ASTRA_DB_APPLICATION_TOKEN` (your generated token AstraCS:*******)
 
-- Edit `.env` and provide the required variables:
-    - `WATSONX_PROJECT_ID` (your watsonx.ai project ID)
-    - `WATSONX_API_ENDPOINT` (your watsonx.ai endpoint, e.g. `https://us-south.ml.cloud.ibm.com`)
-    - `WATSONX_API_KEY` (your watsonx.ai API key)
-    - `ASTRA_DB_API_ENDPOINT` and `ASTRA_DB_APPLICATION_TOKEN`
+You need to add them one by one:
 
-6. Now we can run Langflow as follows in the terminal window:
+<img alt="langflow-adding-variable" src="./assets/langflow-adding-variable.png" height="150" />
 
-    ```bash
-    pip install uv
-    uv sync
-    uv run langflow run --env-file .env
-    ```
-    ![run-langflow](./assets/run-langflow.png)
+Here is how your Langflow Global Variables panel should look like:
 
-    This starts Langflow and opens a port to your Codespace in the cloud. Click `Make Public` to ensure you can access Langflow from anywhere on the internet.
+<img alt="langflow-global-variables2" src="./assets/langflow-global-variables2.png" height="150" />
 
-    ![codespace-forward-port](./assets/codespace-forward-port.png)
 
-    Now navigate to `PORTS` which shows you all forwarded ports from the Codespace, click on the `Forwarded Address` for Langflow and click the globe icon to open Langflow in a browser
-
-    ![codespace-ports](./assets/codespace-ports.png)
-
-    💡 In case you lose track of the URL to Langflow, just click on `PORTS` again in the terminal window.
-
-    ⚠️ Ensure the Port Visibility is set to Public, especially important for the MCP server part later on in this tutorial!
-
-    ![codespace-public-port](./assets/codespace-public-port.png)
-
-🎉 Congrats! You finished the set-up part of the workshop. Now for the fun part!
-
-## 📦 Workshop follow-along
+## 🚀 Workshop follow-along
 
 ### 1. 🧱 Setup of a simple Langflow Chatbot
 **Goal:** Create a chatbot with: input → model → output
@@ -345,7 +339,11 @@ Let's run some queries. For instance:
 
 Observe how all the different tools are being used to answer the user's questions.
 
+## 📦 Summary - Time to wrap-up !!
+
 Congratulations! You have successfully run your first Langflow Labs.
+
+----
 
 😊 Did you know that LangFlow integrated with [watsonx Orchestrate](https://www.ibm.com/products/watsonx-orchestrate), IBM best-in-class Agentic Platform ? 😊
 
