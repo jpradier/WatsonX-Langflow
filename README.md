@@ -37,6 +37,7 @@ This workshop assumes you have access to:
 During the course, you'll gain access to the following by signing up for free:
 1. [DataStax Astra DB](https://astra.datastax.com) (sign up through Google, your **public** Github account or manually with an email address)
 2. [IBM watsonx.ai](https://www.ibm.com/products/watsonx-ai) (you can sign up for a free trial or use one of the following API keys and project ID):
+
 WATSONX_PROJECT_ID
 ```shell
 7b035894-fb3f-4ab7-8ebe-071f65106a24
